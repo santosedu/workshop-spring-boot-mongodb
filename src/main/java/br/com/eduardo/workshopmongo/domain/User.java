@@ -3,13 +3,16 @@ package br.com.eduardo.workshopmongo.domain;
 import java.io.Serializable;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
+	@Indexed
 	private String id;
+	@Indexed
 	private String name;
 	private String email;
 	
